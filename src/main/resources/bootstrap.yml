@@ -1,10 +1,13 @@
-server:
-  port: 8888
 spring:
   application:
     name: config-server
   cloud:
     config:
       server:
+        bootstrap: true
         git:
+#          uri: file:///D:/Bootcamp50/github/config-repository
           uri: https://github.com/bootcamp50-EHS/config-repository.git
+          default-label: "develop"
+server:
+  port: 8888
